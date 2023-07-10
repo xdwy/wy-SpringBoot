@@ -24,7 +24,11 @@ public class WySpringApplication {
         applicationContext.refresh();
 
         //启动Tomcat
+        WebServer webServer = getWebServer();
         startTomcat(applicationContext);
+    }
+
+    private static WebServer getWebServer() {
     }
 
     private static void startTomcat(WebApplicationContext applicationContext) {
